@@ -112,7 +112,7 @@ def generate_emoji(
 
 
 def load_model(path="data/pretrained_model.pt"):
-    model = torch.load(path)
+    model = torch.load(path, weights_only=False)
     model.eval()
     return model
 
